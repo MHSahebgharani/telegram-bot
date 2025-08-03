@@ -1,6 +1,6 @@
 # Telegram Bot
 
-A Laravel package for handling Telegram bot webhooks and message strategies.
+A Laravel package for handling Telegram bot for channels and direct message webhooks and message strategies.
 
 ## Features
 
