@@ -1,0 +1,21 @@
+{
+    "name": "mhsahebgharani/telegram-bot",
+    "type": "project",
+    "description": "package for telegram bot with laravel",
+    "keywords": ["framework", "laravel", "telegram", "bot"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TelegramBot\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohammad H Sahebgharani",
+            "email": "m.sahebgharani50@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
