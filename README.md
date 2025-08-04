@@ -8,6 +8,18 @@ A Laravel package for handling Telegram bot for channels and direct message webh
 - Strategy pattern for different message types (text, file, poll, base64, etc.)
 - Easily extendable and configurable
 
+## Creating a Telegram Bot
+
+Before you can use this package, you need to create a Telegram bot and obtain a bot token:
+
+1. Open the Telegram app and search for the official bot called [@BotFather](https://t.me/BotFather).
+2. Start a chat with BotFather and type the command: `/newbot`
+3. Follow the prompts to choose a name and a username for your bot (the username must end with "bot", e.g., `mychannelhelperbot`).
+4. After completing the steps, BotFather will provide you with an API token. It will look like: `123456789:ABCdefGhIJKlmNoPQRstuVWXyz`
+5. **Keep this token safe!** You’ll need it to connect your code to your Telegram bot.
+
+Once you have your token, you can proceed with the installation and configuration steps below.
+
 ## Installation
 
 Install via Composer:
