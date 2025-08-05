@@ -8,6 +8,6 @@ abstract class TelegramBaseStrategy
 {
     protected function apiUrl(string $method): string
     {
-        return "https://api.telegram.org/bot" . config('telegram.bots.mybot.token') . "/{$method}";
+        return "https://api.telegram.org/bot" . config('telegram.token') . "/{$method}";
     }
 }

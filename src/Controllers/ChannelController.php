@@ -3,15 +3,15 @@
 namespace Telegram\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Telegram\TelegramService;
+use Telegram\TelegramMessageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class ChannelController extends Controller
 {
-    public TelegramService $telegram;
+    public TelegramMessageService $telegram;
 
-    public function __construct(TelegramService $telegram)
+    public function __construct(TelegramMessageService $telegram)
     {
         $this->telegram = $telegram;
     }
