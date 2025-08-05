@@ -72,7 +72,7 @@ The package provides a webhook endpoint to receive updates from Telegram. Make s
 
 - The default webhook route is:
   ```
-  POST /api/telegram/webhook
+  POST /telegram/webhook
   ```
 - Telegram will send all updates (messages, commands, etc.) to this endpoint.
 - You can customize the route in your Laravel routes file if needed.
@@ -108,6 +108,11 @@ use TelegramBot\Contracts\TelegramHandlerInterface;
 
 class MyCustomCommand implements TelegramHandlerInterface
 {
+    public function supports(array $callback): bool
+    {
+        return isset($callback['message']['text']) && $callback['message']['text'] === '/your-custom-command';
+    }
+    
     public function handle($update)
     {
         // Your custom command logic here
