@@ -5,7 +5,7 @@ namespace Telegram;
 use Telegram\Helper\TelegramStrategyResolver;
 use Telegram\Enums\TelegramMessageType;
 
-class TelegramService
+class TelegramMessageService
 {
     public function __construct(protected TelegramStrategyResolver $resolver)
     {
@@ -28,6 +28,7 @@ class TelegramService
             isset($data['options']) => TelegramMessageType::POLL,
             isset($data['files']) || isset($data['file']) => TelegramMessageType::FILE,
             isset($data['text']) => TelegramMessageType::TEXT,
+            isset($data['callback_query_id']) => TelegramMessageType::CALLBACK,
             default => throw new \InvalidArgumentException('Unsupported message payload'),
         };
     }

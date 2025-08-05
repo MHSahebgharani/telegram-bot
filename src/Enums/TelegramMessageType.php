@@ -10,4 +10,5 @@ enum TelegramMessageType: string
     case DOCUMENT = 'document';
     case BASE64 = 'base64';
     case POLL = 'poll';
+    case CALLBACK = 'callback';
 }
